@@ -8,6 +8,7 @@
         color: #000;
         width: 100%;
         height: 100%;
+        background: linear-gradient(to top, rgb(76, 161, 175), rgb(196, 224, 229));
     }
 
     h1,
@@ -47,7 +48,7 @@
     }
 
     .drag {
-        width: 90%;
+        width: 25%;
         padding: 30px 0;
         background-color: rgb(255, 255, 255);
         border: 8px dashed rgb(0, 0, 0, .3);
@@ -181,7 +182,7 @@
         font-size: 30px;
         line-height: 38px;
     }
-   
+
 
     .p2 label {
         font-size: 14px;
@@ -249,8 +250,8 @@
         height: 30px;
         font-size: 15px;
         background-color: #fff;
-        border: 2px solid rgb(55, 78, 255);
-        border-left: 5px solid rgb(55, 78, 255);
+        border: 2px solid #afb5e9;
+        border-left: 5px solid #afb5e9;
         padding: 0 10px;
 
     }
@@ -275,7 +276,7 @@
         height: 8px;
         border-radius: 4px;
         box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
-       
+
         animation: 1s bang ease-out 3 backwards, 1s gravity ease-in 3 backwards, 5s position linear 3 backwards;
 
         /* animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards; */

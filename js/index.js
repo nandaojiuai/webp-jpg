@@ -8,6 +8,7 @@ input.addEventListener('change', function() {
     readFiles([...this.files])
 }, false)
 // 读取并转换图片,全部放进allOkFiles
+setConfig()
 async function readFiles(allFiles) {
     let files = [...allFiles]
     if (files.length === 0) return
@@ -96,7 +97,7 @@ function setConfig() {
     config.size = document.querySelector('#select_size').value - 0
     config.quality = document.querySelector('#select_quality').value - 0
     config.isZip = document.querySelector('#select_isZip').checked
-    console.log(config)
+    console.log(config,'这是')
 }
 // 生成base64
 function file2Base64(file) {
@@ -158,7 +159,7 @@ function funDownload(content, filename = '未命名') {
     eleLink.click()
     // 然后移除
     document.body.removeChild(eleLink)
-    // location.reload() 
+    // location.reload()
 }
 
 // 设置拖放文件

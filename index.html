@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>webp图片转换</title>
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <!-- 兼容适配 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 设备适配 -->
     <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- webapp全屏 -->
@@ -13,19 +11,8 @@
     <meta name="format-detection" content="telephone=no, email=no" /> <!-- 禁止电话邮件自动识别 -->
     <meta name="HandheldFriendly" content="true" /> <!-- 移动设备优化，针对不支持viewpoint设备 -->
     <meta name="MobileOptimized" content="320" /> <!-- 微软旧浏览器适配 -->
-    <!--  -->
     <link rel="shortcut icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./css/index.css">
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?3b0931bcaac4aba82e0b86cce3b5033e";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-
 </head>
 
 <body id="body" class="">
@@ -65,7 +52,7 @@
         <select name="select_quality" id="select_quality" style="display: none">
             <option value="1">1</option>
         </select>
-        <label for="select_isZip">不打包：</label>
+        <label for="select_isZip">不打包：(勾选默认不打包直接下载图片)</label>
         <input type="checkbox" name="select_isZip" value="1" id="select_isZip">
 
     </div>
@@ -93,11 +80,6 @@
 
         <div class="con">
             <div class="img_box" id="img_box">
-                <!-- <div class="img_one">
-                    <p class="type">gif</p>
-                    <p class="size">200x100</p>
-                    <img src="./images/test01.jpg" alt="">
-                </div> -->
             </div>
             <p class="p1">+</p>
         </div>
@@ -108,6 +90,9 @@
     <!--  -->
     <canvas id="can"></canvas>
     <!-- jszip打包📦用 -->
+    <script>
+        document.querySelector('#select_isZip').checked = true
+    </script>
     <script src="./js/jszip.min.js"></script>
     <script src="./js/index.js"></script>
 
