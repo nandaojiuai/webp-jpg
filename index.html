@@ -4,7 +4,7 @@
     <title>Z&Y</title>
     <meta charset="utf-8" />
     <meta http-equiv="content-language" content="zh-cn" />
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="images/favicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 </head>
 <body class="is-preload">
@@ -16,12 +16,16 @@
             <div class="inner">
                 <body id="body" class="">
                 <!--  -->
-                <input type="file" name="files" id="files" accept=".jpeg,.jpg,.png,.gif,.webp,.svg,.ico,.bmp" multiple />
-                <!--  -->
-                <output id="list"></output>
-                <div class="p2" style="z-index: 99999;">
-                    <h2>图片文件转换</h2>
-                    <label for="select_type">图片输出格式为：</label>
+                <input type="file" name="files" id="files" accept=".jpeg,.jpg,.png,.gif,.webp,.svg,.ico,.bmp" multiple style=" display: none;
+        visibility: hidden;"/>
+                <div class="p2" style="z-index: 99999;  font-size: 30px;
+        line-height: 38px;
+        padding: 25px 0;
+        text-align: center;
+        font-weight: 900;">
+                    <h2 style="  font-size: 30px;
+        line-height: 38px;color: #ffffff;"></h2>
+                    <label for="select_type" style=" font-size: 14px;color: #ffffff;">图片输出格式为：</label>
                     <select name="select_type" id="select_type">
                         <option value="jpg">jpg</option>
                         <option value="png">png</option>
@@ -50,13 +54,23 @@
                     <select name="select_quality" id="select_quality" style="display: none">
                         <option value="1">1</option>
                     </select>
-                    <label for="select_isZip">不打包：(勾选默认不打包直接下载图片)</label>
+                    <label for="select_isZip" style="font-size: 14px;color: #ffffff;">不打包：(勾选默认不打包直接下载图片)</label>
                     <input type="checkbox" name="select_isZip" value="1" id="select_isZip">
 
                 </div>
 
-                <label class="drag" for="files">
-                    <div id="loading">
+                <label class="drag" for="files" style="   width: 25%;
+        padding: 30px 0;
+        border: 8px dashed rgb(0, 0, 0, .3);
+        border-radius: 50px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;">
+                    <div id="loading" style="    display: none;
+        zoom: 6;">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
                 <rect x="0" y="9.76753" width="4" height="10.4649" fill="#333" opacity="0.2">
                     <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite"></animate>
@@ -75,11 +89,16 @@
                 </rect>
             </svg>
                     </div>
-
                     <div class="con">
-                        <div class="img_box" id="img_box">
+                        <div class="img_box" id="img_box" style="  display: flex;
+        flex-wrap: wrap;
+        justify-content: center;">
                         </div>
-                        <p class="p1">+</p>
+                        <p class="p1" style="  font-size: 100px;
+        line-height: 100px;
+        height: 100px;
+        font-weight: 900;
+        opacity: .3;">+</p>
                     </div>
                     <div>
                         点击选择/拖放文件（可批量,批量方式打开选择文件按住Ctrl+鼠标左键点击图片即可）
@@ -97,7 +116,7 @@
     height: 100vh;
     width: 100vw;z-index: -1;">
 </canvas>
-<canvas id="can"></canvas>
+<canvas id="can" style="display: none;"></canvas>
 <!-- jszip打包📦用 -->
 <script>
     document.querySelector('#select_isZip').checked = true
